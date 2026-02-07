@@ -119,6 +119,20 @@ Some useful time series libraries:
   - [The ROCKET transform](https://www.aeon-toolkit.org/en/latest/examples/transformations/rocket.html)
   - [MiniRocket](https://www.aeon-toolkit.org/en/stable/examples/transformations/minirocket.html)
 - [tsai](https://timeseriesai.github.io/tsai/)
+  ```
+  pip install tsai
+  # Downgrade fastcore for compatibility with tsai 
+  pip install fastcore==1.5.29
+  # Downgrade scikit for compatibility with tsai 
+  pip install scikit-learn==1.1.3
+  conda create -n tsai_env python=3.10 -y
+  conda activate tsai_env
+  pip install tsai==0.3.6 fastai==2.7.12 fastcore==1.5.29 scikit-learn==1.1.3
+  pip install --force-reinstall numpy pandas scikit-learn fastai
+  pip install --force-reinstall fastcore==1.5.29
+  pip install xgboost
+  pip install lightgbm
+  ```
   - [ROCKET: a new state-of-the-art time series classifier](https://colab.research.google.com/github/timeseriesAI/tsai/blob/master/tutorial_nbs/02_ROCKET_a_new_SOTA_classifier.ipynb) | [Tutorial notebooks](https://timeseriesai.github.io/tsai/tutorials.html)
 - [pyts](https://pyts.readthedocs.io/en/stable/index.html)
 - [DTAIDistance](https://dtaidistance.readthedocs.io/en/latest/) (Distance Measure)
@@ -128,21 +142,3 @@ Some useful time series libraries:
 Some biological computation libraries:
 - [ViennaRNA](https://viennarna.readthedocs.io/en/latest/index.html)
 - [Biopython](https://biopython.org/)
-
-## MISC
-
-For testing tsai:
-```
-pip install tsai
-# Downgrade fastcore for compatibility with tsai 
-pip install fastcore==1.5.29
-# Downgrade scikit for compatibility with tsai 
-pip install scikit-learn==1.1.3
-conda create -n tsai_env python=3.10 -y
-conda activate tsai_env
-pip install tsai==0.3.6 fastai==2.7.12 fastcore==1.5.29 scikit-learn==1.1.3
-pip install --force-reinstall numpy pandas scikit-learn fastai
-pip install --force-reinstall fastcore==1.5.29
-pip install xgboost
-pip install lightgbm
-```
